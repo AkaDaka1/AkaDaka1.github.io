@@ -216,23 +216,44 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  white-space: nowrap;
+}
+
+.role {
+  margin: 4px 0 0;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  color: var(--accent-2);
+}
+
+.hero-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-top: 6px;
 }
 
 .email {
-  display: inline-block;
-  margin-top: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: "JetBrains Mono", ui-monospace, monospace;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--muted);
   text-decoration: none;
   transition: var(--transition);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
+}
+
+.email i {
+  font-size: 0.72rem;
+  color: rgba(88, 101, 242, 0.9);
 }
 
 .email:hover {
+  color: var(--accent-2);
+}
+
+.email:hover i {
   color: var(--accent-2);
 }
 
@@ -572,6 +593,189 @@ img {
 }
 
 /* =========================================================
+   Timeline (experience)
+   ========================================================= */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 16px;
+}
+
+/* Vertical connector between markers */
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 42px;
+  bottom: -18px;
+  left: 19px;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(88, 101, 242, 0.4), transparent);
+}
+
+.timeline-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(88, 101, 242, 0.12);
+  border: 1px solid rgba(88, 101, 242, 0.28);
+  transition: var(--transition);
+}
+
+.timeline-marker i {
+  font-size: 1rem;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline-item:hover .timeline-marker {
+  background: rgba(88, 101, 242, 0.2);
+  border-color: rgba(88, 101, 242, 0.5);
+  box-shadow: var(--shadow-accent);
+}
+
+.timeline-content {
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.timeline-item:hover .timeline-content {
+  border-color: rgba(88, 101, 242, 0.28);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.timeline-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
+.timeline-head h3 {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.timeline-period {
+  margin: 6px 0 0;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.timeline-list {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.timeline-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
+.timeline-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--grad);
+}
+
+.timeline-desc {
+  margin: 10px 0 0;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
+.inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.inline-link:hover {
+  color: var(--accent-2);
+}
+
+/* Small lists (infra / education) */
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plain-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
+.plain-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--grad);
+}
+
+.plain-list strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.edu-block {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.edu-block .column-title {
+  margin-bottom: 14px;
+}
+
+/* =========================================================
    Skills
    ========================================================= */
 
@@ -764,6 +968,28 @@ html.js .reveal.is-visible {
   .span-5,
   .span-7 {
     grid-column: span 12;
+  }
+}
+
+@media (max-width: 640px) {
+  .timeline-item {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .timeline-marker {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    left: 15px;
+    top: 34px;
+  }
+
+  .timeline-content {
+    padding: 14px;
   }
 }
 

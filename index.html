@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="meta.title">Данил Момот — Python-разработчик</title>
-  <meta name="description" content="Python-разработчик: десктопные приложения на PySide6/Qt, бэкенд на FastAPI, Docker и CI/CD." />
+  <title data-i18n="meta.title">Данил Момот — SRE / Python</title>
+  <meta name="description" content="SRE (junior): Linux, Docker, CI/CD, автоматизация на Python. Санкт-Петербург, офис / удалёнка / гибрид." />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Danil Momot — Python Developer" />
-  <meta property="og:description" content="Desktop apps with PySide6/Qt, backends with FastAPI, Docker and CI/CD." />
+  <meta property="og:title" content="Danil Momot — SRE / Python" />
+  <meta property="og:description" content="Junior SRE: Linux, Docker, CI/CD and automation with Python." />
   <meta property="og:image" content="icons/avatar.png" />
   <meta name="theme-color" content="#0a0b10" />
 
@@ -28,15 +28,24 @@
       </a>
       <div class="title">
         <h1 data-i18n="hero.name">Данил Момот</h1>
-        <a class="email" href="mailto:danilmomoyyy@gmail.com">danilmomoyyy@gmail.com</a>
+        <p class="role" data-i18n="hero.role">SRE (junior) · Python · Linux · Docker · CI/CD</p>
+        <div class="hero-contacts">
+          <a class="email" href="mailto:dan.mom0t@yandex.ru">
+            <i class="fas fa-envelope"></i>dan.mom0t@yandex.ru
+          </a>
+          <a class="email" href="https://t.me/mom_danil" target="_blank" rel="noopener">
+            <i class="fab fa-telegram"></i>@mom_danil
+          </a>
+        </div>
       </div>
     </div>
 
     <div class="header-right">
       <nav class="topnav" aria-label="Навигация">
         <a href="#about" class="nav-link active" data-i18n="nav.about">О себе</a>
-        <a href="#projects" class="nav-link" data-i18n="nav.projects">Проекты</a>
-        <a href="#skills" class="nav-link" data-i18n="nav.skills">Навыки</a>
+        <a href="#experience" class="nav-link" data-i18n="nav.experience">Опыт</a>
+        <a href="#skills" class="nav-link" data-i18n="nav.skills">Стек</a>
+        <a href="#infra" class="nav-link" data-i18n="nav.infra">Инфраструктура</a>
       </nav>
       <div class="lang-switch" role="group" aria-label="Язык / Language">
         <button type="button" class="lang-btn" data-lang="ru">RU</button>
@@ -55,18 +64,18 @@
       </div>
       <div class="section-body">
         <p data-i18n="about.p1">
-          Привет, я Данил — Python-разработчик. Делаю десктопные приложения и бэкенд:
-          от идеи и архитектуры до релиза с автотестами и CI/CD.
+          SRE — направление, куда иду осознанно: меньше ручной работы, больше автоматизации
+          и надёжности. Python — <strong>7 лет</strong>; Linux — рабочая среда: администрирую
+          собственный сервер, разворачиваю сервисы через Docker/Compose и bash.
         </p>
         <p data-i18n="about.p2">
-          Автор <strong>ClicKit</strong> — автокликера для Windows с визуальным блочным
-          редактором сценариев. Внутри — Python, PySide6/Qt, Blockly и облачный
-          REST-сервис на FastAPI с PostgreSQL.
+          Строю <strong>ClicKit</strong>: <strong>274 автотеста</strong>, CI/CD на GitHub Actions,
+          Docker-образы, релиз 1.0.0. Сейчас добавляю сервисный слой: FastAPI + PostgreSQL,
+          метрики, логи и трейсы, SLO и Terraform / k3s.
         </p>
         <p data-i18n="about.p3">
-          Больше всего люблю полный цикл: понятная архитектура, тесты, которые реально
-          ловят баги, контейнеры, собирающиеся одинаково на любой машине, и интерфейс,
-          к которому не нужна инструкция.
+          Ищу стажировку SRE, чтобы отвечать за надёжность на реальном масштабе.
+          Готов к офису, удалёнке или гибриду — Санкт-Петербург.
         </p>
       </div>
     </section>
@@ -82,7 +91,11 @@
             <i class="fab fa-github contact-icon"></i>
             <span class="contact-label">GitHub</span>
           </a>
-          <a class="contact-card" href="mailto:danilmomoyyy@gmail.com" title="Email">
+          <a class="contact-card" href="https://t.me/mom_danil" target="_blank" rel="noopener" title="Telegram">
+            <i class="fab fa-telegram-plane contact-icon"></i>
+            <span class="contact-label">Telegram</span>
+          </a>
+          <a class="contact-card" href="mailto:dan.mom0t@yandex.ru" title="Email">
             <i class="fas fa-envelope contact-icon"></i>
             <span class="contact-label">Email</span>
           </a>
@@ -94,68 +107,110 @@
       </div>
     </section>
 
-    <!-- ==================== PROJECTS ==================== -->
-    <section id="projects" class="section bento-card span-12 reveal">
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section id="experience" class="section bento-card span-12 reveal">
       <div class="section-head">
-        <h2 data-i18n="projects.title">Проекты</h2>
-        <span class="muted sub-note" data-i18n="projects.note">то, что уже работает</span>
+        <h2 data-i18n="exp.title">Опыт и проекты</h2>
+        <span class="muted sub-note" data-i18n="exp.note">разработка + эксплуатация</span>
       </div>
       <div class="section-body">
-        <div class="cards-grid">
-          <a href="https://github.com/AkaDaka1/ClicKit" target="_blank" rel="noopener" class="card-link">
-            <article class="project-card">
-              <div class="project-icon">
-                <i class="fas fa-arrow-pointer project-icon-fa"></i>
-              </div>
-              <div class="project-info">
-                <h3>ClicKit <span class="badge">v1.0.0</span></h3>
-                <p data-i18n="projects.clikit">Автокликер для Windows с блочным редактором сценариев: собираешь клики, паузы и циклы из блоков — без кода.</p>
-                <div class="project-tech">
-                  <span class="tech-chip">Python</span>
-                  <span class="tech-chip">PySide6</span>
-                  <span class="tech-chip">Blockly</span>
-                  <span class="tech-chip">FastAPI</span>
-                  <span class="tech-chip">Docker</span>
-                </div>
-              </div>
-              <div class="play-arrow"><i class="fas fa-chevron-right"></i></div>
-            </article>
-          </a>
+        <div class="timeline">
 
-          <a href="https://github.com/AkaDaka1/leetcode_python" target="_blank" rel="noopener" class="card-link">
-            <article class="project-card">
-              <div class="project-icon">
-                <i class="fas fa-code project-icon-fa"></i>
+          <article class="timeline-item">
+            <div class="timeline-marker"><i class="fas fa-arrow-pointer"></i></div>
+            <div class="timeline-content">
+              <header class="timeline-head">
+                <h3>ClicKit — <span data-i18n="exp.clikit.subtitle">Windows-приложение для автоматизации</span></h3>
+                <span class="badge" data-i18n="exp.role.devops">разработчик и эксплуатант</span>
+              </header>
+              <p class="timeline-period" data-i18n="exp.clikit.period">2026 — настоящее время</p>
+              <ul class="timeline-list">
+                <li data-i18n="exp.clikit.1">Сценарии автоматизации собираются из визуальных блоков (Python 3.11+, PySide6, Blockly) — без кода и без исполнения произвольного кода.</li>
+                <li data-i18n="exp.clikit.2">274 автотеста, ruff; CI/CD на GitHub Actions: линт, тесты 3.11–3.13, тесты в Linux-контейнере, релиз по тегу.</li>
+                <li data-i18n="exp.clikit.3">Docker: Linux-образ тестов (Xvfb) и Windows-образ сборки (servercore), .dockerignore, воспроизводимая сборка.</li>
+                <li data-i18n="exp.clikit.4">Релиз 1.0.0: PyInstaller, SHA-256, NOTICE, smoke-запуск собранного приложения.</li>
+                <li data-i18n="exp.clikit.5">Надёжность: аварийный стоп, валидируемый IR-формат .acl.json, лимиты, атомарные сохранения, ротация логов.</li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">PySide6</span>
+                <span class="tech-chip">Blockly</span>
+                <span class="tech-chip">Docker</span>
+                <span class="tech-chip">GitHub Actions</span>
+                <span class="tech-chip">PyInstaller</span>
               </div>
-              <div class="project-info">
-                <h3>leetcode_python</h3>
-                <p data-i18n="projects.leetcode">Коллекция моих решений задач LeetCode на Python: алгоритмы, структуры данных, разбор сложности.</p>
-                <div class="project-tech">
-                  <span class="tech-chip">Python</span>
-                  <span class="tech-chip" data-i18n="projects.chip.algo">Алгоритмы</span>
-                </div>
-              </div>
-              <div class="play-arrow"><i class="fas fa-chevron-right"></i></div>
-            </article>
-          </a>
+              <a class="inline-link" href="https://github.com/AkaDaka1/ClicKit" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i><span data-i18n="exp.clikit.repo">Репозиторий и релиз 1.0.0</span>
+              </a>
+            </div>
+          </article>
 
-          <div class="project-card coming-soon">
-            <div class="project-icon">
-              <i class="far fa-clock"></i>
+          <article class="timeline-item">
+            <div class="timeline-marker"><i class="fas fa-diagram-project"></i></div>
+            <div class="timeline-content">
+              <header class="timeline-head">
+                <h3 data-i18n="exp.theatre.title">Генератор иммерсивного театра — ВКР</h3>
+                <span class="badge" data-i18n="exp.role.devops">разработчик и эксплуатант</span>
+              </header>
+              <p class="timeline-period" data-i18n="exp.theatre.period">2024 — 2026</p>
+              <ul class="timeline-list">
+                <li data-i18n="exp.theatre.1">FastAPI + PostgreSQL: 4 сущности, миграции при смене схемы.</li>
+                <li data-i18n="exp.theatre.2">Docker Compose dev/prod, конфигурация через .env — одинаковое окружение локально и на сервере.</li>
+                <li data-i18n="exp.theatre.3">75+ автотестов pytest на API и бизнес-логику.</li>
+                <li data-i18n="exp.theatre.4">n8n как отдельный сервис, интеграция через вебхуки.</li>
+                <li data-i18n="exp.theatre.5">Развёртывание и сопровождение на собственном Linux-сервере: SSH, firewall, обновление и перезапуск сервисов.</li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-chip">FastAPI</span>
+                <span class="tech-chip">PostgreSQL</span>
+                <span class="tech-chip">Docker Compose</span>
+                <span class="tech-chip">n8n</span>
+                <span class="tech-chip">pytest</span>
+              </div>
             </div>
-            <div class="project-info">
-              <h3 data-i18n="projects.more">Следующий проект</h3>
-              <p data-i18n="projects.moreDesc">уже собирается...</p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"><i class="fab fa-telegram-plane"></i></div>
+            <div class="timeline-content">
+              <header class="timeline-head">
+                <h3 data-i18n="exp.bots.title">Telegram- и Discord-боты на собственном сервере</h3>
+                <span class="badge" data-i18n="exp.role.devops">разработчик и эксплуатант</span>
+              </header>
+              <p class="timeline-period" data-i18n="exp.bots.period">ранее</p>
+              <ul class="timeline-list">
+                <li data-i18n="exp.bots.1">Боты для сообществ до 1000+ пользователей: модерация, роли, уведомления.</li>
+                <li data-i18n="exp.bots.2">Развёртывание, обновление и перезапуск через SSH и bash-скрипты.</li>
+                <li data-i18n="exp.bots.3">Настройка firewall и контроль доступных портов.</li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">Linux</span>
+                <span class="tech-chip">Bash</span>
+                <span class="tech-chip">SSH</span>
+              </div>
             </div>
-          </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"><i class="fas fa-chalkboard-user"></i></div>
+            <div class="timeline-content">
+              <header class="timeline-head">
+                <h3 data-i18n="exp.teach.title">Преподаватель IT-дисциплин</h3>
+              </header>
+              <p class="timeline-period" data-i18n="exp.teach.period">около 2 лет</p>
+              <p class="timeline-desc" data-i18n="exp.teach.desc">Объясняю сложное простыми словами — навык, который помогает и в документации, и в разборах инцидентов.</p>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
     <!-- ==================== SKILLS ==================== -->
-    <section id="skills" class="section bento-card span-12 reveal">
+    <section id="skills" class="section bento-card span-7 reveal">
       <div class="section-head">
-        <h2 data-i18n="skills.title">Навыки</h2>
+        <h2 data-i18n="skills.title">Ключевые навыки</h2>
       </div>
 
       <div class="section-body">
@@ -163,10 +218,31 @@
           <div class="skills-column">
             <h3 class="column-title" data-i18n="skills.langs">Языки</h3>
             <div class="skills-grid">
-              <span class="skill-chip">Python</span>
+              <span class="skill-chip">Python (7 <span data-i18n="skills.years">лет</span>)</span>
+              <span class="skill-chip">Bash</span>
               <span class="skill-chip">SQL</span>
-              <span class="skill-chip">JavaScript</span>
-              <span class="skill-chip">HTML / CSS</span>
+            </div>
+          </div>
+
+          <div class="skills-column">
+            <h3 class="column-title" data-i18n="skills.containers">Контейнеры и CI/CD</h3>
+            <div class="skills-grid">
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">Docker Compose</span>
+              <span class="skill-chip">GitHub Actions</span>
+              <span class="skill-chip">Git / GitHub</span>
+            </div>
+          </div>
+
+          <div class="skills-column">
+            <h3 class="column-title" data-i18n="skills.linux">Linux и сети</h3>
+            <div class="skills-grid">
+              <span class="skill-chip" data-i18n="skills.chip.linuxServers">Linux-серверы</span>
+              <span class="skill-chip">SSH</span>
+              <span class="skill-chip">Firewall</span>
+              <span class="skill-chip" data-i18n="skills.chip.routing">Маршрутизация</span>
+              <span class="skill-chip">VPN / WARP</span>
+              <span class="skill-chip">OpenWRT</span>
             </div>
           </div>
 
@@ -174,35 +250,73 @@
             <h3 class="column-title" data-i18n="skills.backend">Бэкенд</h3>
             <div class="skills-grid">
               <span class="skill-chip">FastAPI</span>
-              <span class="skill-chip">PostgreSQL</span>
-              <span class="skill-chip">SQLAlchemy</span>
-              <span class="skill-chip">Alembic</span>
-              <span class="skill-chip">REST API</span>
-            </div>
-          </div>
-
-          <div class="skills-column">
-            <h3 class="column-title" data-i18n="skills.desktop">Десктоп</h3>
-            <div class="skills-grid">
+              <span class="skill-chip">REST</span>
+              <span class="skill-chip">HTTP / HTTPS</span>
               <span class="skill-chip">PySide6 / Qt</span>
-              <span class="skill-chip">Blockly</span>
-              <span class="skill-chip">PyInstaller</span>
-              <span class="skill-chip">pyautogui</span>
             </div>
           </div>
 
           <div class="skills-column">
-            <h3 class="column-title" data-i18n="skills.tools">Инструменты</h3>
+            <h3 class="column-title" data-i18n="skills.db">Базы данных</h3>
             <div class="skills-grid">
-              <span class="skill-chip">Docker</span>
-              <span class="skill-chip">GitHub Actions</span>
-              <span class="skill-chip">Git</span>
+              <span class="skill-chip">PostgreSQL</span>
+              <span class="skill-chip">MongoDB</span>
+              <span class="skill-chip">SQLite</span>
+              <span class="skill-chip">MS SQL Server</span>
+            </div>
+          </div>
+
+          <div class="skills-column">
+            <h3 class="column-title" data-i18n="skills.quality">Тесты и качество</h3>
+            <div class="skills-grid">
               <span class="skill-chip">pytest</span>
               <span class="skill-chip">ruff</span>
-              <span class="skill-chip">Linux</span>
-              <span class="skill-chip">Windows</span>
+              <span class="skill-chip" data-i18n="skills.chip.gates">CI-гейты</span>
             </div>
           </div>
+
+          <div class="skills-column">
+            <h3 class="column-title" data-i18n="skills.sre">Наблюдаемость и SRE</h3>
+            <div class="skills-grid">
+              <span class="skill-chip" data-i18n="skills.chip.learning">изучаю Prometheus и Grafana</span>
+              <span class="skill-chip">SLA / SLO / SLI</span>
+              <span class="skill-chip">Error budget</span>
+            </div>
+          </div>
+
+          <div class="skills-column">
+            <h3 class="column-title" data-i18n="skills.ai">ИИ-инструменты</h3>
+            <div class="skills-grid">
+              <span class="skill-chip">OpenCode</span>
+              <span class="skill-chip">Cursor</span>
+              <span class="skill-chip">Claude Code</span>
+              <span class="skill-chip">MCP / skills</span>
+              <span class="skill-chip">n8n</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INFRA ==================== -->
+    <section id="infra" class="section bento-card span-5 reveal">
+      <div class="section-head">
+        <h2 data-i18n="infra.title">Инфраструктура и сеть</h2>
+      </div>
+      <div class="section-body">
+        <ul class="plain-list">
+          <li data-i18n="infra.1">Домашняя лаборатория на OpenWRT: прошивка роутеров, маршрутизация, firewall, VPN/WARP-туннели, разделение трафика между сервисами.</li>
+          <li data-i18n="infra.2">Собственный Linux-сервер: SSH, обновление и перезапуск сервисов, bash-скрипты, firewall.</li>
+          <li data-i18n="infra.3">Cisco Packet Tracer — моделирование сетей (учебные лабораторные).</li>
+        </ul>
+
+        <div class="edu-block">
+          <h3 class="column-title" data-i18n="edu.title">Образование</h3>
+          <ul class="plain-list">
+            <li data-i18n="edu.1"><strong>РГПУ им. А. И. Герцена</strong> — магистратура, 2028: «Цифровая образовательная среда и цифровые технологии» (44.04.01), 1 курс</li>
+            <li data-i18n="edu.2"><strong>РГПУ им. А. И. Герцена</strong> — бакалавриат, 2026: «Информационные системы и технологии» (09.03.02)</li>
+            <li data-i18n="edu.3"><strong>Английский</strong> — B2</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -214,8 +328,9 @@
           <h3 class="footer-title" data-i18n="footer.nav">Навигация</h3>
           <div class="footer-links">
             <a href="#about" class="footer-link" data-i18n="footer.about">✦ О себе</a>
-            <a href="#projects" class="footer-link" data-i18n="footer.projects">⚡ Проекты</a>
-            <a href="#skills" class="footer-link" data-i18n="footer.skills">◆ Навыки</a>
+            <a href="#experience" class="footer-link" data-i18n="footer.experience">⚙ Опыт</a>
+            <a href="#skills" class="footer-link" data-i18n="footer.skills">◆ Стек</a>
+            <a href="#infra" class="footer-link" data-i18n="footer.infra">⚡ Инфраструктура</a>
           </div>
         </div>
 
@@ -225,19 +340,19 @@
             <a href="https://github.com/AkaDaka1" target="_blank" rel="noopener" class="social-icon" title="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a href="mailto:danilmomoyyy@gmail.com" class="social-icon" title="Email">
-              <i class="fas fa-envelope"></i>
+            <a href="https://t.me/mom_danil" target="_blank" rel="noopener" class="social-icon" title="Telegram">
+              <i class="fab fa-telegram-plane"></i>
             </a>
-            <a href="https://github.com/AkaDaka1/ClicKit" target="_blank" rel="noopener" class="social-icon" title="ClicKit">
-              <i class="fas fa-arrow-pointer"></i>
+            <a href="mailto:dan.mom0t@yandex.ru" class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
             </a>
           </div>
         </div>
 
         <div class="footer-section">
-          <h3 class="footer-title" data-i18n="footer.cta">Есть идея?</h3>
+          <h3 class="footer-title" data-i18n="footer.cta">Ищу стажировку SRE</h3>
           <div class="footer-contact">
-            <a href="mailto:danilmomoyyy@gmail.com" class="contact-button">
+            <a href="mailto:dan.mom0t@yandex.ru" class="contact-button">
               <span data-i18n="footer.write">Написать мне</span>
               <span class="button-glow"></span>
             </a>
